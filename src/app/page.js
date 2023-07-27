@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import MyForm from './components/MyForm';
 import JsonViewer from './components/JsonViewer';
-
+import { Map } from 'immutable';
 
 const HomePage = () => {
   const [jsonData, setJsonData] = useState({
@@ -72,7 +72,8 @@ const HomePage = () => {
             "ENTRY_FEE": 1,
             "BOOKING_CLOSED": false
         }
-    ]
+    ],
+    immutable: Map({ key: 'value' }),
 });
 
   const handleJsonDataChange = (data) => {
