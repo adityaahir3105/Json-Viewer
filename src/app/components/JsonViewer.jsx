@@ -1,21 +1,21 @@
 'use client'
-import React from 'react';
-import {JsonView,darkStyles, defaultStyles} from 'react-json-view-lite';
-import { JSONTree } from 'react-json-tree';
-
+import React, { useState, useEffect } from 'react';
+import SearchableReactJson from 'searchable-react-json-view';
 
 const JsonViewer = ({ jsonData }) => {
-  
+  const [searchText, setSearchText] = React.useState("");
+
   return (
-    <div className="container mx-auto mt-8">
-      <h2 className="text-2xl font-bold text-center mb-4">Order JSON</h2>
-      <div className="max-w-md mx-auto border p-4 rounded-lg">
-        <JSONTree
-          data={jsonData}
-          shouldInitiallyExpand={(level) => true} 
-          style={darkStyles}
+    <div>
+      <div className="mb-4">
+        <input
+          className="searchTerm text-black" // Added text-black class to change the text color
+          placeholder="Search for a term"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
         />
       </div>
+      <SearchableReactJson theme="monokai" highlightSearch={searchText} src={jsonData} searchable />
     </div>
   );
 };

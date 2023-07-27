@@ -14,12 +14,16 @@
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "immutable": "^4.3.1",
+    "jquery": "^3.7.0",
+    "jsonpath": "^1.1.1",
     "next": "13.4.12",
     "postcss": "8.4.27",
-    "react": "17.0.0",
-    "react-dom": "18.2.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
     "react-json-tree": "^0.18.0",
+    "react-json-view": "latest",
     "react-json-view-lite": "^0.9.7",
+    "searchable-react-json-view": "^0.0.8",
     "tailwindcss": "3.3.3"
   }
 }
